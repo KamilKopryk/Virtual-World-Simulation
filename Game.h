@@ -122,7 +122,7 @@ inline Position Game::CalculatePosition(const int i) const
 }
 
 inline Game::Game(const int x_max = 50, const int y_max = 50):
-	x_map_(x_max), y_map_(y_max), organisms_map_(x_max* y_max, nullptr)
+	x_map_(x_max), y_map_(y_max), organisms_map_( (__int64)x_max* y_max, nullptr)
 {
 	const auto max_number_of_organisms = x_map_ * y_map_;
 	organisms_vector_.reserve(max_number_of_organisms);
